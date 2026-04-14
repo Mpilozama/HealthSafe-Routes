@@ -15,3 +15,17 @@ export const initMap = (containerId) => {
     }).addTo(map);
 
     return map;
+}
+
+
+/**
+ * Adds a health risk marker to the map
+ * @param {L.Map} map - The map instance
+ * @param {number} lat - Latitude
+ * @param {number} lng - Longitude
+ * @param {string} type - Type of risk (e.g., "Pollution")
+ */
+export const addRiskMarker = (map, lat, lng, type) => {
+    const marker = L.marker([lat, lng]).addTo(map);
+    marker.bindPopup(`<b>Reported Risk:</b> ${type}`).openPopup();
+};
