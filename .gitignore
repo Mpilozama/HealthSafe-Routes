@@ -1,0 +1,7 @@
+# Ignore environment variables and API keys
+config.js
+.env
+
+# Ignore node modules if you eventually use npm
+node_modules/
+.DS_Store
